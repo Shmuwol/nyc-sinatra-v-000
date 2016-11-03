@@ -7,7 +7,7 @@
   <label>Titles:</label>
   <% Title.all.each do |title| %>
     <input id="title_<%= title.id %>" type="checkbox" name="figure[title_ids][]" value="<%= title.id %>"><%= title.name %></input>
-  <% end %>
+  <% end %><br><br>
 
   <label>Landmarks:</label>
   <% Landmark.all.each do |landmark| %>
@@ -23,11 +23,3 @@
 
   <input type="submit" value="Create New Figure" id="create">
 </form>
-
-
-<!-- expect(page.body).to include('<form')
-expect(page.body).to include('figure[name]')
-expect(page.body).to include('figure[title_ids][]')
-expect(page.body).to include('figure[landmark_ids][]')
-expect(page.body).to include('landmark[name]')
-expect(page.body).to include('title[name]') -->
